@@ -9,7 +9,7 @@ library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
 # As a directory please specify the local directory where your project is located
-Mascot_Lamp_Table <- read_csv("Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Lamps(Responses).csv")
+Mascot_Lamp_Table <- read_csv("~/Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Lamps(Responses).csv")
 
 #-------------------------------------------------------------------------------------------------------------------------
 #  -------- -------- -------- -------- -------- Creating Tables and Variables -------- -------- -------- -------- --------
@@ -376,39 +376,6 @@ my_comparisonsLamp1 <- list( c("Y", "O"), c("Y", "T"), c("Y","B"), c("Y","P"),
                              c("O", "T"), c("O", "B"), c("O","P"),
                              c("T", "B"), c("T", "P"), c("B", "P"))
 
-# plotExtraversionColors <- ggboxplot(longExtraversionColors, x = "Colors", y = "Scales", xlab = "E Personality Trait",
-#                                     fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longExtraversionColors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotAgreeablenessColors <- ggboxplot(longAgreeablenessColors, x = "Colors", y = "Scales", xlab = "A Personality Trait",
-#                                      fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longAgreeablenessColors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotConscientiousnessColors <- ggboxplot(longConscientiousnessColors, x = "Colors", y = "Scales", xlab = "C Personality Trait",
-#                                          fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longConscientiousnessColors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotNeuroticismColors <- ggboxplot(longNeuroticismColors, x = "Colors", y = "Scales", xlab = "N Personality Trait",
-#                                    fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longNeuroticismColors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotOpennessColors <- ggboxplot(longOpennessColors, x = "Colors", y = "Scales", xlab = "O Personality Trait",
-#                                 fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))   + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longOpennessColors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# # Plot all Personalities in one plot
-# ggarrange(plotExtraversionColors, plotAgreeablenessColors, plotConscientiousnessColors, plotNeuroticismColors, plotOpennessColors, ncol = 2, nrow = 3)
-
 #############################
 # Study-2: WITHIN COLOR
 longYellow_Personalities <- melt(Yellow_Personalities, id.vars=c("ID"))
@@ -429,35 +396,6 @@ colnames(longPink_Personalities) <- c("ID", "Personalities", "Scales")
 my_comparisonsLamp2 <- list( c("E", "A"), c("E", "C"), c("E","N"), c("E","O"),
                                 c("A", "C"), c("A", "N"), c("A","O"),
                                 c("C", "N"), c("C", "O"), c("N", "O"))
-
-# plotYellowPersonalities <- ggboxplot(longYellow_Personalities, x = "Personalities", y = "Scales", xlab = "Y Color Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longYellow_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotOrange_Personalities <- ggboxplot(longOrange_Personalities, x = "Personalities", y = "Scales", xlab = "O Color Condition")   + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longOrange_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotTurquoise_Personalities <- ggboxplot(longTurquoise_Personalities, x = "Personalities", y = "Scales", xlab = "T Color Condition")  + expand_limits(y = c(1,5))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longTurquoise_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotBloodRed_Personalities <- ggboxplot(longBloodRed_Personalities, x = "Personalities", y = "Scales", xlab = "BloodRed Color Condition")  + expand_limits(y = c(1,5))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longBloodRed_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotPink_Personalities <- ggboxplot(longPink_Personalities, x = "Personalities", y = "Scales", xlab = "P Color Condition")  + expand_limits(y = c(1,5))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLamp2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longPink_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# # Plot all Colors in one plot
-# ggarrange(plotYellowPersonalities, plotOrange_Personalities, plotTurquoise_Personalities, plotBloodRed_Personalities, plotPink_Personalities, ncol = 2, nrow = 3)
-
 ##################################################################################
 ## Display summary of longExtraversionColor, longAgreeablenessColors and etc matrix
 library(FSA)
@@ -475,7 +413,9 @@ Summarize(Scales ~ Personalities, data=longTurquoise_Personalities)
 Summarize(Scales ~ Personalities, data=longBloodRed_Personalities)
 Summarize(Scales ~ Personalities, data=longPink_Personalities)
 
-# Friedman -> Wilcoxon + wilcox value for each group -> Bonferroni
+################################################################
+# Friedman -> Effect Sizes -> Wilcoxon Signed Rank tests + wilcox value for each group -> Wilcoxon with Bonferroni correction
+################################################################
 library("rstatix")
 library(survival)
 library(coin)
@@ -557,6 +497,8 @@ wilcox_O_p_values <- c(0.1008, 0.006888, 0.0005363, 0.004396, 0.3292, 0.002139, 
 p.adjust(wilcox_O_p_values, method = "bonf")
 
 ################################################################
+# Friedman -> Effect Sizes -> Wilcoxon Signed Rank tests + wilcox value for each group -> Wilcoxon with Bonferroni correction
+################################################################
 # Study-2: Within Color/Condition
 friedman.test(Yellow_Personalities)
 longYellow_Personalities %>% wilcox_effsize(Scales ~ Personalities, paired = TRUE)
@@ -633,8 +575,9 @@ wilcoxsign_test(Pink_Personalities_DataFrame$N ~ Pink_Personalities_DataFrame$O,
 wilcox_Pink_p_values <- c(6.771e-05, 0.0005513, 0.0002405, 0.7033, 0.03893, 2.241e-05, 8.881e-05, 2.243e-05, 0.001431, 8.418e-05)
 p.adjust(wilcox_Pink_p_values, method = "bonf")
 
+########### Visual representation of Study-1 and Study-2 with boxplots
 
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
+stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1), symbols = c("**", "**", "**", "*", "ns"))
 ###################
 my_comparisonsLampNew1E <- list( c("Y", "T"), 
                                  c("Y","B"), 
@@ -662,7 +605,6 @@ testPlot1A <- ggboxplot(longAgreeablenessColors,
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.7)) + mean_comparison1A + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1A
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsLampNew1C <- list( c("Y", "O"), 
                                  c("Y","B"), 
                                  c("O","T"),
@@ -687,7 +629,6 @@ testPlot1N <- ggboxplot(longNeuroticismColors,
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.7)) + mean_comparison1N + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1N
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "*", "*", "ns"))
 my_comparisonsLampNew1O <- list( c("Y", "B"), 
                                  c("Y","P"),
                                  c("O", "B"))
@@ -721,7 +662,6 @@ testPlot2Ora <- ggboxplot(longOrange_Personalities,
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.7)) + mean_comparison2Ora + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2Ora
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsLampNew2Tur <- list( c("E", "A"), 
                                    c("E","C"), 
                                    c("E","N"),
@@ -749,7 +689,6 @@ testPlot2Blo <- ggboxplot(longBloodRed_Personalities,
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.7)) + mean_comparison2Blo + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2Blo
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "*", "*", "ns"))
 my_comparisonsLampNew2Pin <- list( c("E", "A"), 
                                    c("E","C"), 
                                    c("E","N"),
@@ -763,10 +702,3 @@ testPlot2Pin <- ggboxplot(longPink_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.7)) + mean_comparison2Pin + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2Pin
-
-
-
-
-
-
-
