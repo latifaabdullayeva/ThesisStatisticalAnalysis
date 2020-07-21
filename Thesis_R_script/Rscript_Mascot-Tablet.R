@@ -3,7 +3,7 @@
 # install.packages("survival")
 # install.packages("FSA")
 
-# Import libarary for reading your Mascot-Lamp csv file
+# Import libarary for reading your Mascot-Lamp csv file 
 library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
