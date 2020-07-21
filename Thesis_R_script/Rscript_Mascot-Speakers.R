@@ -7,7 +7,7 @@
 library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
-Mascot_Speakers_Table <- read_csv("Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Speakers (Responses) - Form responses 1.csv")
+Mascot_Speakers_Table <- read_csv("~/Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Speakers (Responses) - Form responses 1.csv")
 
 #-------------------------------------------------------------------------------------------------------------------------
 #  -------- -------- -------- -------- -------- Creating Tables and Variables -------- -------- -------- -------- --------
