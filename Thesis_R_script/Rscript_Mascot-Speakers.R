@@ -7,7 +7,7 @@
 library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
-Mascot_Speakers_Table <- read_csv("~/Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Speakers (Responses) - Form responses 1.csv")
+Mascot_Speakers_Table <- read_csv("~/Desktop/LatifaAbdullayevaThesis/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Speakers(Responses).csv")
 
 #-------------------------------------------------------------------------------------------------------------------------
 #  -------- -------- -------- -------- -------- Creating Tables and Variables -------- -------- -------- -------- --------
@@ -495,36 +495,6 @@ colnames(longNeuroticismSongs) <- c("ID", "Songs", "Scales")
 longOpennessSongs <- melt(Openness_Songs, id.vars=c("ID"))
 colnames(longOpennessSongs) <- c("ID", "Songs", "Scales")
 
-my_comparisonsSpeaker1 <- list( c("S", "C"), c("C", "U"), c("S","U") )
-
-# plotExtraversionSongs <- ggboxplot(longExtraversionSongs, x = "Songs", y = "Scales", xlab = "E Personality Trait")   + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Songs, data = longExtraversionSongs) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotAgreeablenessSongs <- ggboxplot(longAgreeablenessSongs, x = "Songs", y = "Scales", xlab = "A Personality Trait")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker1, label =  "p.signif") 
-#   #stat_pvalue_manual(compare_means(Scales ~ Songs, data = longAgreeablenessSongs) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotConscientiousnessSongs <- ggboxplot(longConscientiousnessSongs, x = "Songs", y = "Scales", xlab = "C Personality Trait")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker1, label =  "p.signif") 
-#   #stat_pvalue_manual(compare_means(Scales ~ Songs, data = longConscientiousnessSongs) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotNeuroticismSongs <- ggboxplot(longNeuroticismSongs, x = "Songs", y = "Scales", xlab = "N Personality Trait")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Songs, data = longNeuroticismSongs) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotOpennessSongs <- ggboxplot(longOpennessSongs, x = "Songs", y = "Scales", xlab = "O Personality Trait")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Songs, data = longOpennessSongs) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7)), hide.ns = TRUE, label = "p.signif")
-# 
-# # Plot all Personalities in one plot
-# ggarrange(plotExtraversionSongs, plotAgreeablenessSongs, plotConscientiousnessSongs, plotNeuroticismSongs, plotOpennessSongs, ncol = 2, nrow = 3)
-
 # STUDY-2:
 longSophisticated_Personalities <- melt(Sophisticated_Personalities, id.vars=c("ID"))
 colnames(longSophisticated_Personalities) <- c("ID", "Personalities", "Scales")
@@ -534,28 +504,6 @@ colnames(longContemporary_Personalities) <- c("ID", "Personalities", "Scales")
 
 longUnpretentious_Personalities <- melt(Unpretentious_Personalities, id.vars=c("ID"))
 colnames(longUnpretentious_Personalities) <- c("ID", "Personalities", "Scales")
-
-my_comparisonsSpeaker2 <- list( c("E", "A"), c("E", "C"), c("E","N"), c("E","O"),
-                                c("A", "C"), c("A", "N"), c("A","O"),
-                                c("C", "N"), c("C", "O"), c("N", "O"))
-
-# plotSophisticated_Personalities <- ggboxplot(longSophisticated_Personalities, x = "Personalities", y = "Scales", xlab = "S Condition") + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longSophisticated_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotContemporary_Personalities <- ggboxplot(longContemporary_Personalities, x = "Personalities", y = "Scales", xlab = "C Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longContemporary_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# plotUnpretentious_Personalities <- ggboxplot(longUnpretentious_Personalities, x = "Personalities", y = "Scales", xlab = "U Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsSpeaker2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longUnpretentious_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# # Plot all Colors in one plot
-# ggarrange(plotSophisticated_Personalities, plotContemporary_Personalities, plotUnpretentious_Personalities, ncol = 2, nrow = 2)
 
 ## Display summary of longExtraversionVibrationLevels matrix
 library(FSA)
@@ -672,56 +620,51 @@ library(gridExtra)
 library(grid)
 library(lattice)
 
-
+########### Visual representation of Study-1 and Study-2 with boxplots with Wilcoxon Signed Rank tests, therefore we pass (paired=True) argument
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
+stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1), symbols = c("**", "**", "*", "*", "ns"))
 my_comparisonsSpeakerNew1E <- list( c("S", "C"), 
                                     c("S","U"), 
                                     c("C","U"))
-mean_comparison1E <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1E, label =  "p.signif", symnum.args = stars)
+mean_comparison1E <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1E, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1E <- ggboxplot(longExtraversionSongs,
                       x = "Songs", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 6.05)) + mean_comparison1E + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1E
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsSpeakerNew1A <- list( c("S", "C"), 
                                     c("C","U"))
-mean_comparison1A <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1A, label =  "p.signif", symnum.args = stars)
+mean_comparison1A <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1A, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1A <- ggboxplot(longAgreeablenessSongs,
                         x = "Songs", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 6.05)) + mean_comparison1A + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1A
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsSpeakerNew1C <- list( c("S", "C"), 
                                     c("C","U"))
-mean_comparison1C <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1C, label =  "p.signif", symnum.args = stars)
+mean_comparison1C <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1C, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1C <- ggboxplot(longConscientiousnessSongs,
                         x = "Songs", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 6.05)) + mean_comparison1C + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1C
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsSpeakerNew1N <- list( c("S", "C"), 
                                     c("C","U"))
-mean_comparison1N <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1N, label =  "p.signif", symnum.args = stars)
+mean_comparison1N <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1N, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1N <- ggboxplot(longNeuroticismSongs,
                         x = "Songs", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 6.05)) + mean_comparison1N + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1N
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsSpeakerNew1O <- list( c("S", "C"), 
                                     c("S","U"), 
                                     c("C","U"))
-mean_comparison1O <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1O, label =  "p.signif", symnum.args = stars)
+mean_comparison1O <- stat_compare_means(comparisons = my_comparisonsSpeakerNew1O, paired=TRUE,  label =  "p.signif", symnum.args = stars)
 testPlot1O <- ggboxplot(longOpennessSongs,
                         x = "Songs", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 6.05)) + mean_comparison1O + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1O
 ###############################################################################################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsSpeakerNew2Sop <- list( c("E", "A"), 
                                       c("E","N"), 
                                       c("E","O"),
@@ -731,7 +674,7 @@ my_comparisonsSpeakerNew2Sop <- list( c("E", "A"),
                                       c("C", "N"), 
                                       c("C", "O"), 
                                       c("N", "O"))
-mean_comparison2Sop <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Sop, label =  "p.signif", symnum.args = stars)
+mean_comparison2Sop <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Sop, paired=TRUE,  label =  "p.signif", symnum.args = stars)
 testPlot2Sop <- ggboxplot(longSophisticated_Personalities,
                         x = "Personalities", y = "Scales",  xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 9)) + mean_comparison2Sop + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -741,7 +684,7 @@ my_comparisonsSpeakerNew2Con <- list( c("E", "A"),
                                       c("E","C"), 
                                       c("E","N"),
                                       c("E", "O"))
-mean_comparison2Con <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Con, label =  "p.signif", symnum.args = stars)
+mean_comparison2Con <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Con, paired=TRUE,  label =  "p.signif", symnum.args = stars)
 testPlot2Con <- ggboxplot(longContemporary_Personalities,
                         x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 9)) + mean_comparison2Con + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -754,7 +697,7 @@ my_comparisonsSpeakerNew2Un <- list( c("E", "A"),
                                      c("C", "N"),
                                      c("C", "O"), 
                                      c("N", "O"))
-mean_comparison2Un <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Un, label =  "p.signif", symnum.args = stars)
+mean_comparison2Un <- stat_compare_means(comparisons = my_comparisonsSpeakerNew2Un, paired=TRUE,  label =  "p.signif", symnum.args = stars)
 testPlot2Un <- ggboxplot(longUnpretentious_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5), limits=c(1, 9)) + mean_comparison2Un + theme(legend.position = "none") + grids(linetype = "dashed")
