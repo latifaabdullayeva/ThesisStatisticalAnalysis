@@ -7,7 +7,7 @@
 library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
-Mascot_Tablet_Table <- read_csv("~/Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Tablet (Responses) - Form responses 1.csv")
+Mascot_Tablet_Table <- read_csv("~/Desktop/LatifaAbdullayevaThesis/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Tablet(Responses).csv")
 
 #-------------------------------------------------------------------------------------------------------------------------
 #  -------- -------- -------- -------- -------- Creating Tables and Variables -------- -------- -------- -------- --------
@@ -304,53 +304,6 @@ colnames(longNeuroticismT_Colors) <- c("ID", "Colors", "Scales")
 longOpennessT_Colors <- melt(Openness_T_Colors, id.vars=c("ID"))
 colnames(longOpennessT_Colors) <- c("ID", "Colors", "Scales")
 
-my_comparisonsLTablet1 <- list( c("Y", "O"), c("Y", "T"), c("Y","B"), c("Y","P"),
-                             c("O", "T"), c("O", "B"), c("O","P"),
-                             c("T", "B"), c("T", "P"), c("B", "P"))
-
-# plotExtraversionT_Colors <- ggboxplot(longExtraversionT_Colors, x = "Colors", y = "Scales", xlab = "E Personality Trait",
-#                                     fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLTablet1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longExtraversionT_Colors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsLTablet1)
-# 
-# plotAgreeablenessT_Colors <- ggboxplot(longAgreeablenessT_Colors, x = "Colors", y = "Scales", xlab = "A Personality Trait",
-#                                      fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLTablet1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longAgreeablenessT_Colors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsLTablet1)
-# 
-# plotConscientiousnessT_Colors <- ggboxplot(longConscientiousnessT_Colors, x = "Colors", y = "Scales", xlab = "C Personality Trait",
-#                                          fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLTablet1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longConscientiousnessT_Colors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsLTablet1)
-# 
-# plotNeuroticismT_Colors <- ggboxplot(longNeuroticismT_Colors, x = "Colors", y = "Scales", xlab = "N Personality Trait",
-#                                    fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLTablet1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longNeuroticismT_Colors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsLTablet1)
-# 
-# plotOpennessT_Colors <- ggboxplot(longOpennessT_Colors, x = "Colors", y = "Scales", xlab = "O Personality Trait",
-#                                 fill = "Colors", palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB"))  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsLTablet1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Colors, data = longOpennessT_Colors) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsLTablet1)
-# 
-# # Plot all Personalities in one plot
-# ggarrange(plotExtraversionT_Colors, plotAgreeablenessT_Colors, plotConscientiousnessT_Colors, plotNeuroticismT_Colors, plotOpennessT_Colors, ncol = 2, nrow = 3)
-
 # STUDY-2:
 longYellow_T_Personalities <- melt(Yellow_T_Personalities, id.vars=c("ID"))
 colnames(longYellow_T_Personalities) <- c("ID", "Personalities", "Scales")
@@ -366,44 +319,6 @@ colnames(longBlood_Red_T_Personalities) <- c("ID", "Personalities", "Scales")
 
 longPink_T_Personalities <- melt(Pink_T_Personalities, id.vars=c("ID"))
 colnames(longPink_T_Personalities) <- c("ID", "Personalities", "Scales")
-
-my_comparisonsTablet2 <- list( c("E", "A"), c("E", "C"), c("E","N"), c("E","O"),
-                             c("A", "C"), c("A", "N"), c("A","O"),
-                             c("C", "N"), c("C", "O"), c("N", "O"))
-
-# plotYellow_T_Personalities <- ggboxplot(longYellow_T_Personalities, x = "Personalities", y = "Scales", xlab = "Y Color Condition")   + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsTablet2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longYellow_T_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsTablet2)
-# plotOrange_T_Personalities <- ggboxplot(longOrange_T_Personalities, x = "Personalities", y = "Scales", xlab = "O Color Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsTablet2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longOrange_T_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsTablet2)
-# plotTurquoise_T_Personalities <- ggboxplot(longTurquoise_T_Personalities, x = "Personalities", y = "Scales", xlab = "T Color Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsTablet2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longTurquoise_T_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsTablet2)
-# plotBlood_Red_T_Personalities <- ggboxplot(longBlood_Red_T_Personalities, x = "Personalities", y = "Scales", xlab = "B Color Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsTablet2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longBlood_Red_T_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsTablet2)
-# plotPink_T_Personalities <- ggboxplot(longPink_T_Personalities, x = "Personalities", y = "Scales", xlab = "P Color Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsTablet2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longPink_T_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsTablet2)
-# 
-# # Plot all Colors in one plot
-# ggarrange(plotYellow_T_Personalities, plotOrange_T_Personalities, plotTurquoise_T_Personalities, plotBlood_Red_T_Personalities, plotPink_T_Personalities, ncol = 2, nrow = 3)
 
 ## Display summary of longExtraversionColor matrix
 library(FSA)
@@ -578,14 +493,14 @@ wilcoxsign_test(Pink_T_Personalities_DataFrame$N ~ Pink_T_Personalities_DataFram
 wilcox_Pink_T_p_values <- c(0.001709, 0.03768, 0.03788, 0.2904, 0.0222, 0.001131, 0.00281, 0.004228, 0.2973, 0.04073)
 p.adjust(wilcox_Pink_T_p_values, method = "bonf")
 
-
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "*", "*", "*", "ns"))
+########### Visual representation of Study-1 and Study-2 with boxplots with Wilcoxon Signed Rank tests, therefore we pass (paired=True) argument
+stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1), symbols = c("**", "*", "*", "*", "ns"))
 ###################
 my_comparisonsLampNew1TE <- list( c("Y", "B"), 
                                  c("Y","P"),
                                  c("O", "B"),
                                  c("O", "P"))
-mean_comparison1TE <- stat_compare_means(comparisons = my_comparisonsLampNew1TE, label =  "p.signif", symnum.args = stars)
+mean_comparison1TE <- stat_compare_means(comparisons = my_comparisonsLampNew1TE, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1TE <- ggboxplot(longExtraversionT_Colors,
                         x = "Colors", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -599,7 +514,7 @@ my_comparisonsLampNew1TA <- list( c("Y", "T"),
                                  c("O", "P"),
                                  c("T", "B"), 
                                  c("B", "P"))
-mean_comparison1TA <- stat_compare_means(comparisons = my_comparisonsLampNew1TA, label =  "p.signif", symnum.args = stars)
+mean_comparison1TA <- stat_compare_means(comparisons = my_comparisonsLampNew1TA, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1TA <- ggboxplot(longAgreeablenessT_Colors,
                         x = "Colors", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -611,7 +526,7 @@ my_comparisonsLampNew1TC <- list( c("Y", "T"),
                                  c("O", "B"),
                                  c("T", "B"), 
                                  c("T", "P"))
-mean_comparison1TC <- stat_compare_means(comparisons = my_comparisonsLampNew1TC, label =  "p.signif", symnum.args = stars)
+mean_comparison1TC <- stat_compare_means(comparisons = my_comparisonsLampNew1TC, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1TC <- ggboxplot(longConscientiousnessT_Colors,
                         x = "Colors", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -622,7 +537,7 @@ my_comparisonsLampNew1TN <- list( c("Y","B"),
                                  c("O", "B"),
                                  c("T", "B"), 
                                  c("B", "P"))
-mean_comparison1TN <- stat_compare_means(comparisons = my_comparisonsLampNew1TN, label =  "p.signif", symnum.args = stars)
+mean_comparison1TN <- stat_compare_means(comparisons = my_comparisonsLampNew1TN, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1TN <- ggboxplot(longNeuroticismT_Colors,
                         x = "Colors", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -633,21 +548,20 @@ my_comparisonsLampNew1TO <- list( c("Y", "O"),
                                  c("Y", "T"), 
                                  c("Y","B"), 
                                  c("Y","P"))
-mean_comparison1TO <- stat_compare_means(comparisons = my_comparisonsLampNew1TO, label =  "p.signif", symnum.args = stars)
+mean_comparison1TO <- stat_compare_means(comparisons = my_comparisonsLampNew1TO, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1TO <- ggboxplot(longOpennessT_Colors,
                         x = "Colors", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.2)) + mean_comparison1TO + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1TO
 ###############################################################################################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "*", "*", "*", "ns"))
 my_comparisonsLampNew2TYel <- list( c("E", "C"), 
                                    c("E","N"), 
                                    c("E","O"),
                                    c("A", "O"), 
                                    c("C", "O"),
                                    c("N", "O"))
-mean_comparison2TYel <- stat_compare_means(comparisons = my_comparisonsLampNew2TYel, label =  "p.signif", symnum.args = stars)
+mean_comparison2TYel <- stat_compare_means(comparisons = my_comparisonsLampNew2TYel, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2TYel <- ggboxplot(longYellow_T_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.1)) + mean_comparison2TYel + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -656,13 +570,12 @@ testPlot2TYel
 my_comparisonsLampNew2TOra <- list( c("E", "A"), 
                                    c("E","N"), 
                                    c("A","C"))
-mean_comparison2TOra <- stat_compare_means(comparisons = my_comparisonsLampNew2TOra, label =  "p.signif", symnum.args = stars)
+mean_comparison2TOra <- stat_compare_means(comparisons = my_comparisonsLampNew2TOra, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2TOra <- ggboxplot(longOrange_T_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.1)) + mean_comparison2TOra + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2TOra
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("*", "*", "*", "*", "ns"))
 my_comparisonsLampNew2TTur <- list( c("E", "A"), 
                                    c("E","C"), 
                                    c("A","N"),
@@ -670,7 +583,7 @@ my_comparisonsLampNew2TTur <- list( c("E", "A"),
                                    c("C", "N"),
                                    c("C", "O"), 
                                    c("N", "O"))
-mean_comparison2TTur <- stat_compare_means(comparisons = my_comparisonsLampNew2TTur, label =  "p.signif", symnum.args = stars)
+mean_comparison2TTur <- stat_compare_means(comparisons = my_comparisonsLampNew2TTur, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2TTur <- ggboxplot(longTurquoise_T_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.1)) + mean_comparison2TTur + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -681,7 +594,7 @@ my_comparisonsLampNew2TBlo <- list( c("E", "N"),
                                    c("A","O"),
                                    c("C", "N"), 
                                    c("N", "O"))
-mean_comparison2TBlo <- stat_compare_means(comparisons = my_comparisonsLampNew2TBlo, label =  "p.signif", symnum.args = stars)
+mean_comparison2TBlo <- stat_compare_means(comparisons = my_comparisonsLampNew2TBlo, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2TBlo <- ggboxplot(longBlood_Red_T_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.1)) + mean_comparison2TBlo + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -691,7 +604,7 @@ my_comparisonsLampNew2TPin <- list( c("E", "A"),
                                    c("A","N"), 
                                    c("A","O"),
                                    c("C", "N"))
-mean_comparison2TPin <- stat_compare_means(comparisons = my_comparisonsLampNew2TPin, label =  "p.signif", symnum.args = stars)
+mean_comparison2TPin <- stat_compare_means(comparisons = my_comparisonsLampNew2TPin, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2TPin <- ggboxplot(longPink_T_Personalities,
                           x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 8.1)) + mean_comparison2TPin + theme(legend.position = "none") + grids(linetype = "dashed")
