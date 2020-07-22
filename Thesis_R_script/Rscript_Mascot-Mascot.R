@@ -7,7 +7,7 @@
 library(readr)
 
 # Created the variable for our whole Mascot_Lamp table
-Mascot_Mascot_Table <- read_csv("~/Desktop/Thesis/ThesisScript/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Mascot (Responses) - Form responses 1.csv")
+Mascot_Mascot_Table <- read_csv("~/Desktop/LatifaAbdullayevaThesis/ThesisStatisticalAnalysis/Thesis_Experiment_csv_files/Mascot-Mascot(Responses).csv")
 
 #-------------------------------------------------------------------------------------------------------------------------
 #  -------- -------- -------- -------- -------- Creating Tables and Variables -------- -------- -------- -------- --------
@@ -304,48 +304,6 @@ colnames(longNeuroticismVibrationLevels) <- c("ID", "VibrationLevels", "Scales")
 longOpennessVibrationLevels <- melt(Openness_VibrationLevels, id.vars=c("ID"))
 colnames(longOpennessVibrationLevels) <- c("ID", "VibrationLevels", "Scales")
 
-my_comparisonsMascot1 <- list( c("L-1", "L-2"), c("L-1", "L-3"), c("L-1","L-4"), c("L-1","L-5"),
-                             c("L-2", "L-3"), c("L-2", "L-4"), c("L-2","L-5"),
-                             c("L-3", "L-4"), c("L-3", "L-5"), c("L-4", "L-5"))
-
-# plotExtraversionVibrationLevels <- ggboxplot(longExtraversionVibrationLevels, x = "VibrationLevels", y = "Scales", xlab = "E Personality Trait")+ 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ VibrationLevels, data = longExtraversionVibrationLevels) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot1)
-# 
-# plotAgreeablenessVibrationLevels <- ggboxplot(longAgreeablenessVibrationLevels, x = "VibrationLevels", y = "Scales", xlab = "A Personality Trait")+ 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ VibrationLevels, data = longAgreeablenessVibrationLevels) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot1)
-# 
-# plotConscientiousnessVibrationLevels <- ggboxplot(longConscientiousnessVibrationLevels, x = "VibrationLevels", y = "Scales", xlab = "C Personality Trait")+ 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ VibrationLevels, data = longConscientiousnessVibrationLevels) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot1)
-# 
-# plotNeuroticismVibrationLevels <- ggboxplot(longNeuroticismVibrationLevels, x = "VibrationLevels", y = "Scales", xlab = "N Personality Trait")+ 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ VibrationLevels, data = longNeuroticismVibrationLevels) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot1)
-# 
-# plotOpennessVibrationLevels <- ggboxplot(longOpennessVibrationLevels, x = "VibrationLevels", y = "Scales", xlab = "O Personality Trait")+ 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot1, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ VibrationLevels, data = longOpennessVibrationLevels) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot1)
-# 
-# # Plot all Personalities in one plot
-# ggarrange(plotExtraversionVibrationLevels, plotAgreeablenessVibrationLevels, plotConscientiousnessVibrationLevels, plotNeuroticismVibrationLevels, plotOpennessVibrationLevels, ncol = 2, nrow = 3)
-
 # STUDY-2:
 longLevel5_Personalities <- melt(Level5_Personalities, id.vars=c("ID"))
 colnames(longLevel5_Personalities) <- c("ID", "Personalities", "Scales")
@@ -362,43 +320,6 @@ colnames(longLevel1_Personalities) <- c("ID", "Personalities", "Scales")
 longLevel4_Personalities <- melt(Level4_Personalities, id.vars=c("ID"))
 colnames(longLevel4_Personalities) <- c("ID", "Personalities", "Scales")
 
-my_comparisonsMascot2 <- list( c("E", "A"), c("E", "C"), c("E","N"), c("E","O"),
-                             c("A", "C"), c("A", "N"), c("A","O"),
-                             c("C", "N"), c("C", "O"), c("N", "O"))
-
-# plotLevel5Personalities <- ggboxplot(longLevel5_Personalities, x = "Personalities", y = "Scales", xlab = "L-5 Condition")  + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longLevel5_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot2)
-# plotLevel3_Personalities <- ggboxplot(longLevel3_Personalities, x = "Personalities", y = "Scales", xlab = "L-3 Condition") + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longLevel3_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot2)
-# plotLevel2_Personalities <- ggboxplot(longLevel2_Personalities, x = "Personalities", y = "Scales", xlab = "L-2 Condition") + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longLevel2_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot2)
-# plotLevel1_Personalities <- ggboxplot(longLevel1_Personalities, x = "Personalities", y = "Scales", xlab = "L-1 Condition") + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longLevel1_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot2)
-# plotLevel4_Personalities <- ggboxplot(longLevel4_Personalities, x = "Personalities", y = "Scales", xlab = "L-4 Condition") + 
-#   expand_limits(y = c(1,5)) + stat_compare_means(comparisons = my_comparisonsMascot2, label =  "p.signif")
-#   #stat_pvalue_manual(compare_means(Scales ~ Personalities, data = longLevel4_Personalities) %>% 
-#                        #mutate(y.position = c(5.1, 5.4, 5.7, 6.0, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8)), hide.ns = TRUE, label = "p.signif")
-# 
-# ##+ stat_compare_means(comparisons = my_comparisonsMascot2)
-# 
-# # Plot all Colors in one plot
-# ggarrange(plotLevel1_Personalities, plotLevel2_Personalities, plotLevel3_Personalities,  plotLevel4_Personalities, plotLevel5Personalities, ncol = 2, nrow = 3)
 
 ## Display summary of longExtraversionVibrationLevels matrix
 library(FSA)
@@ -573,30 +494,28 @@ wilcoxsign_test(Level4_Personalities_DataFrame$N ~ Level4_Personalities_DataFram
 wilcox_Level4_p_values <- c(0.0003303, 0.005796, 3.181e-05, 0.0001427, 0.0001602, 0.005545, 0.5998, 3.604e-05, 0.0002021, 0.01681)
 p.adjust(wilcox_Level4_p_values, method = "bonf")
 
-
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
+########### Visual representation of Study-1 and Study-2 with boxplots with Wilcoxon Signed Rank tests, therefore we pass (paired=True) argument
+stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1), symbols = c("**", "**", "*", "*", "ns"))
 ###################
 my_comparisonsLampNew1E <- list( c("L-1", "L-4"), 
                                  c("L-1","L-5"), 
                                  c("L-2","L-4"),
                                  c("L-2", "L-5"), 
-                                 c("L-3", "L-5"),
-                                 c("L-4", "L-5"))
-mean_comparison1E <- stat_compare_means(comparisons = my_comparisonsLampNew1E, label =  "p.signif", symnum.args = stars)
+                                 c("L-3", "L-5"))
+mean_comparison1E <- stat_compare_means(comparisons = my_comparisonsLampNew1E, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1E <- ggboxplot(longExtraversionVibrationLevels,
                         x = "VibrationLevels", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.5)) + mean_comparison1E + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1E
 ###################
-stars <- list(cutpoints = c(0, 0.00001, 0.001, 0.01, 0.08, 1), symbols = c("**", "*", "*", "*", "ns"))
 my_comparisonsLampNew1A <- list( c("L-1", "L-2"), 
                                  c("L-1","L-3"), 
                                  c("L-2","L-4"),
                                  c("L-2", "L-5"), 
                                  c("L-3", "L-4"),
                                  c("L-3", "L-5"))
-mean_comparison1A <- stat_compare_means(comparisons = my_comparisonsLampNew1A, label =  "p.signif", symnum.args = stars)
+mean_comparison1A <- stat_compare_means(comparisons = my_comparisonsLampNew1A, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1A <- ggboxplot(longAgreeablenessVibrationLevels,
                         x = "VibrationLevels", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -609,7 +528,7 @@ my_comparisonsLampNew1C <- list( c("L-1", "L-3"),
                                  c("L-2", "L-4"), 
                                  c("L-3", "L-5"),
                                  c("L-4", "L-5"))
-mean_comparison1C <- stat_compare_means(comparisons = my_comparisonsLampNew1C, label =  "p.signif", symnum.args = stars)
+mean_comparison1C <- stat_compare_means(comparisons = my_comparisonsLampNew1C, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1C <- ggboxplot(longConscientiousnessVibrationLevels,
                         x = "VibrationLevels", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -620,16 +539,15 @@ my_comparisonsLampNew1N <- list( c("L-1", "L-2"),
                                  c("L-1","L-3"), 
                                  c("L-1","L-4"),
                                  c("L-1", "L-5"))
-mean_comparison1N <- stat_compare_means(comparisons = my_comparisonsLampNew1N, label =  "p.signif", symnum.args = stars)
+mean_comparison1N <- stat_compare_means(comparisons = my_comparisonsLampNew1N, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1N <- ggboxplot(longNeuroticismVibrationLevels,
                         x = "VibrationLevels", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7)) + mean_comparison1N + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot1N
 ###################
-stars <- list(cutpoints = c(0, 0.00001, 0.001, 0.01, 0.09, 1), symbols = c("**", "*", "*", "*", "ns"))
 my_comparisonsLampNew1O <- list( c("L-1", "L-2"))
-mean_comparison1O <- stat_compare_means(comparisons = my_comparisonsLampNew1O, label =  "p.signif", symnum.args = stars)
+mean_comparison1O <- stat_compare_means(comparisons = my_comparisonsLampNew1O, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot1O <- ggboxplot(longOpennessVibrationLevels,
                         x = "VibrationLevels", y = "Scales", fill = "Colors", xlab = FALSE, ylab = FALSE, width = 0.4,
                         palette = c("#FFFF00", "#FFA500", "#40e0d0", "#8a0303", "#FFC0CB")) +
@@ -641,7 +559,7 @@ my_comparisonsLampNew2L1 <- list( c("E", "A"),
                                   c("A","N"),
                                   c("C", "N"), 
                                   c("N", "O"))
-mean_comparison2L1 <- stat_compare_means(comparisons = my_comparisonsLampNew2L1, label =  "p.signif", symnum.args = stars)
+mean_comparison2L1 <- stat_compare_means(comparisons = my_comparisonsLampNew2L1, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2L1 <- ggboxplot(longLevel1_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.9)) + mean_comparison2L1 + theme(legend.position = "none") + grids(linetype = "dashed")
@@ -651,13 +569,12 @@ my_comparisonsLampNew2L2 <- list( c("E", "A"),
                                   c("A","C"), 
                                   c("A","N"),
                                   c("A", "O"))
-mean_comparison2L2 <- stat_compare_means(comparisons = my_comparisonsLampNew2L2, label =  "p.signif", symnum.args = stars)
+mean_comparison2L2 <- stat_compare_means(comparisons = my_comparisonsLampNew2L2, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2L2 <- ggboxplot(longLevel2_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.9)) + mean_comparison2L2 + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2L2
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "*", "ns"))
 my_comparisonsLampNew2L3 <- list( c("E", "A"), 
                                   c("E","C"), 
                                   c("A","N"),
@@ -665,31 +582,29 @@ my_comparisonsLampNew2L3 <- list( c("E", "A"),
                                   c("C", "N"),
                                   c("C", "O"), 
                                   c("N", "O"))
-mean_comparison2L3 <- stat_compare_means(comparisons = my_comparisonsLampNew2L3, label =  "p.signif", symnum.args = stars)
+mean_comparison2L3 <- stat_compare_means(comparisons = my_comparisonsLampNew2L3, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2L3 <- ggboxplot(longLevel3_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.9)) + mean_comparison2L3 + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2L3
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "**", "**", "**", "ns"))
 my_comparisonsLampNew2L4 <- list( c("E", "A"), 
                                   c("E","N"), 
                                   c("E","O"),
                                   c("A", "C"), 
                                   c("C", "N"),
                                   c("C", "O"))
-mean_comparison2L4 <- stat_compare_means(comparisons = my_comparisonsLampNew2L4, label =  "p.signif", symnum.args = stars)
+mean_comparison2L4 <- stat_compare_means(comparisons = my_comparisonsLampNew2L4, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2L4 <- ggboxplot(longLevel4_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.9)) + mean_comparison2L4 + theme(legend.position = "none") + grids(linetype = "dashed")
 testPlot2L4
 ###################
-stars <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.08, 1), symbols = c("**", "*", "*", "*", "ns"))
 my_comparisonsLampNew2L5 <- list( c("E", "A"), 
                                   c("E","C"), 
                                   c("E","N"),
                                   c("E", "O"))
-mean_comparison2L5 <- stat_compare_means(comparisons = my_comparisonsLampNew2L5, label =  "p.signif", symnum.args = stars)
+mean_comparison2L5 <- stat_compare_means(comparisons = my_comparisonsLampNew2L5, paired=TRUE, label =  "p.signif", symnum.args = stars)
 testPlot2L5 <- ggboxplot(longLevel5_Personalities,
                          x = "Personalities", y = "Scales", xlab = FALSE, ylab = FALSE, width = 0.4) +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5),  limits=c(1, 7.9)) + mean_comparison2L5 + theme(legend.position = "none") + grids(linetype = "dashed")
