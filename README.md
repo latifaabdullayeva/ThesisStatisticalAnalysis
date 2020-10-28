@@ -1,4 +1,4 @@
-# ThesisStatisticalAnalysis
+# thesis-statistical-analysis
 
 For the analysis we used R programming language
 
